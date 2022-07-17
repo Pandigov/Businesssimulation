@@ -19,7 +19,7 @@ public class Niederlassung extends Standort implements Comparable<Niederlassung>
 	private int lohn;
 	
 	/**
-	 * Gibt an, ob die Produktion ausgelöst wurde (true) oder nicht (false)
+	 * Gibt an, ob die Produktion ausgelÃ¶st wurde (true) oder nicht (false)
 	 */
 	private boolean produktionAngefordert;
 	
@@ -29,7 +29,7 @@ public class Niederlassung extends Standort implements Comparable<Niederlassung>
 	private int produzierteMenge=0;
 	
 	/**
-	 * interner Parameter, der angibt, wieviele Einheiten der Ware pro Arbeitender produziert werden können 
+	 * interner Parameter, der angibt, wieviele Einheiten der Ware pro Arbeitender produziert werden kÃ¶nnen 
 	 */
 	private int faktorArbeiterZuMenge=10;
 	
@@ -49,7 +49,7 @@ public class Niederlassung extends Standort implements Comparable<Niederlassung>
 
 	/**
 	 * Mit dieser Methode wird die Produktion der Warenart in der Niederlassung angefordert.
-	 * Anschließend muss mit der Methode produzieren() die Produktion ausgelöst werden. 
+	 * AnschlieÃŸend muss mit der Methode produzieren() die Produktion ausgelÃ¶st werden. 
 	 */
 	public void anfordern() {
 		this.produktionAngefordert=true;
@@ -57,11 +57,11 @@ public class Niederlassung extends Standort implements Comparable<Niederlassung>
 
 	
 	/**
-	 * Diese Methode löst die Produktion aus. Es wird allerdings nur dann Ware produziert, wenn
-	 * vorher auch mit der Methode anfordern() die Produktion ausgelöst wurde. Ansonsten
+	 * Diese Methode lÃ¶st die Produktion aus. Es wird allerdings nur dann Ware produziert, wenn
+	 * vorher auch mit der Methode anfordern() die Produktion ausgelÃ¶st wurde. Ansonsten
 	 * wird nichts produziert.
-	 * Die Menge der produzierten Ware ist von der Anzahl der vorhandenen Arbeiter abhängig. 
-	 * Außerdem unterliegt die Produktion einer zufälligen Schwankung.
+	 * Die Menge der produzierten Ware ist von der Anzahl der vorhandenen Arbeiter abhÃ¤ngig. 
+	 * AuÃŸerdem unterliegt die Produktion einer zufÃ¤lligen Schwankung.
 	 */
 	public void produzieren() {
 		int zufaelligeSchwankungInProzent = (int)Math.round( Math.random() * 60.0)-30;
@@ -84,7 +84,7 @@ public class Niederlassung extends Standort implements Comparable<Niederlassung>
 	}
 	
 	/**
-	 * Es können Arbeitende eingestellt werden.
+	 * Es kÃ¶nnen Arbeitende eingestellt werden.
 	 * 
 	 * @param anzahlEinzustellende Anzahl der neu einzustellenden Arbeitenden
 	 */
@@ -93,7 +93,7 @@ public class Niederlassung extends Standort implements Comparable<Niederlassung>
 	}
 
 	/**
-	 * Es können Arbeitende entlassen werden.
+	 * Es kÃ¶nnen Arbeitende entlassen werden.
 	 * 
 	 * @param anzahlEinzustellende Anzahl der neu einzustellenden Arbeitenden
 	 */
@@ -103,7 +103,7 @@ public class Niederlassung extends Standort implements Comparable<Niederlassung>
 
 	
 	/**
-	 * In der Klasse ist die Warenart gespeichert. Methode gibt die Warenart vom Datentyp Warenart zurück.
+	 * In der Klasse ist die Warenart gespeichert. Methode gibt die Warenart vom Datentyp Warenart zurÃ¼ck.
 	 * @return Warenart vom Datentyp Warenart
 	 */
 	public Warenart getWarenart() {
@@ -111,7 +111,7 @@ public class Niederlassung extends Standort implements Comparable<Niederlassung>
 	}
 	
 	/**
-	 * In der Klasse ist die Warenart gespeichert. Methode gibt den passenden String der Warenart zurück.
+	 * In der Klasse ist die Warenart gespeichert. Methode gibt den passenden String der Warenart zurÃ¼ck.
 	 * @return String der Warenart
 	 */
 	public String getWarenartString() {
