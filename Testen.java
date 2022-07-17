@@ -1,1 +1,0 @@
-System.out.printf("Ort%tWarenart%tStatus Anforderung%tgesendete Fuhrwerke%tArbeiter");
