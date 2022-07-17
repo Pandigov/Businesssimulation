@@ -26,7 +26,7 @@ public class BusinessSimulation001 {
 
 		ArrayList<Niederlassung> niederlassungListe = new ArrayList<Niederlassung>();
 		
-		System.out.println("Verfügbare Niederlassungen: ");
+		System.out.println("VerfÃ¼gbare Niederlassungen: ");
 
 		niederlassungListe.add(new Niederlassung("Dresden", Warenart.GOLD, 2));
 		niederlassungListe.add(new Niederlassung("Einbeck", Warenart.BIER, 1));
@@ -74,7 +74,7 @@ public class BusinessSimulation001 {
 			
 			
 			for (int k = 0; k < niederlassungListe.size(); k++) {
-				System.out.println("Gebe den Lohn für " + niederlassungListe.get(k).getOrt()+ " ein.");
+				System.out.println("Gebe den Lohn fÃ¼r " + niederlassungListe.get(k).getOrt()+ " ein.");
 				int lohnAnfang = myScanner.nextInt();
 				niederlassungListe.get(k).setLohn(lohnAnfang);
 			}
@@ -88,10 +88,10 @@ public class BusinessSimulation001 {
 				System.out.println("=====================================");
 				System.out.println("Lohn " + standort + " " + lohn);
 
-				System.out.println("Wollen sie den Lohn für " + standort + " ändern(j/n)");
+				System.out.println("Wollen sie den Lohn fÃ¼r " + standort + " Ã¤ndern(j/n)");
 				String antwortAendern = myScanner.next();
 				if (antwortAendern.equals("j")) {
-					System.out.println("Auf was soll der Lohn geändert werden?");
+					System.out.println("Auf was soll der Lohn geÃ¤ndert werden?");
 					int antwortLohn = myScanner.nextInt();
 					lohn = antwortLohn;
 				}
@@ -100,7 +100,7 @@ public class BusinessSimulation001 {
 				int antwortEinstellen = myScanner.nextInt();
 				niederlassungListe.get(i).einstellen(antwortEinstellen);
 
-				System.out.println("Wie viele Arbeitskräfte sollen " + standort + " entlassen werden?");
+				System.out.println("Wie viele ArbeitskrÃ¤fte sollen " + standort + " entlassen werden?");
 				int antwortEntlassen = myScanner.nextInt();
 
 				niederlassungListe.get(i).entlassen(antwortEntlassen);
@@ -123,7 +123,7 @@ public class BusinessSimulation001 {
 					}else if (antwortProd.equals("n")) {
 						break;
 					} else {
-						System.out.println("Ungültige Eingabe, bitte versuche es erneut");
+						System.out.println("UngÃ¼ltige Eingabe, bitte versuche es erneut");
 						continue;
 						}
 					}
@@ -155,9 +155,9 @@ public class BusinessSimulation001 {
 						
 					int gewinn = erloes - lohnkosten;
 
-					System.out.println("Erlös durch Verkauf in " + niederlassungListe.get(i).getOrt() + ": " + erloes);
+					System.out.println("ErlÃ¶s durch Verkauf in " + niederlassungListe.get(i).getOrt() + ": " + erloes);
 					System.out.println("Lohnkosten: "+lohnkosten);
-					System.out.println("Gesamterlös: " +gewinn);
+					System.out.println("GesamterlÃ¶s: " +gewinn);
 					System.out.println("Guthaben: "+(gewinn + guthaben));
 					guthaben = gewinn + guthaben;
 					break;
