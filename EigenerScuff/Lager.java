@@ -9,14 +9,14 @@ import java.util.Set;
 public class Lager extends Standort{
 
 	/**
-	 * Ort, in dem das Lager platziert wird. Die Funktionalität ist nicht vom Ortsnamen abhängig.
-	 * Der Ort kann beliebig gewählt werden und dient lediglich der Illustration im Spiel. 
+	 * Ort, in dem das Lager platziert wird. Die FunktionalitÃ¤t ist nicht vom Ortsnamen abhÃ¤ngig.
+	 * Der Ort kann beliebig gewÃ¤hlt werden und dient lediglich der Illustration im Spiel. 
 	 */
 	
 
 	/**
-	 * Erfassung der Warenarten im Lager und der jeweiligen Lagerbestände. Wenn eine Warenart
-	 * nicht im Lager vorhanden ist, wird sie auch in dieser HashMap nicht geführt.
+	 * Erfassung der Warenarten im Lager und der jeweiligen LagerbestÃ¤nde. Wenn eine Warenart
+	 * nicht im Lager vorhanden ist, wird sie auch in dieser HashMap nicht gefÃ¼hrt.
 	 */
 	private HashMap<Warenart, Integer> lagerbestand = new HashMap<Warenart, Integer>();
 	
@@ -30,7 +30,7 @@ public class Lager extends Standort{
 	
 	/**
 	 * Einlagern von Waren einer bestimmten Warenart mit einer bestimmten Menge. Mit dem Aufruf
-	 * wird der Lagerbestand entsprechend erhöht.
+	 * wird der Lagerbestand entsprechend erhÃ¶ht.
 	 * @param warenart			die Warenart, welche eingelagert werden soll 
 	 * @param mengeEinlagern	die Menge der genannten Warenart, die eingelagert werden soll
 	 */
@@ -48,13 +48,13 @@ public class Lager extends Standort{
 	}
 	
 	/**
-	 * Verkaufen von Waren führt zum Verringern von Warenbestand der genannten Warenart.
+	 * Verkaufen von Waren fÃ¼hrt zum Verringern von Warenbestand der genannten Warenart.
 	 * Wenn weniger als die zu verkaufende Menge im Lager vorhanden ist, dann wird
 	 * der gesamte Bestand der betreffenden Warenart verkauft.
 	 * @param warenart			die Warenart, von welcher Waren verkauft werden sollen
 	 * @param mengeVerkaufen	die Menge, die zu verkaufen ist
 	 * @param preis				der Preis, zu welchem die Warenart verkauft wird
-	 * @return					Erlös in Taler, der durch den Verkauf zum genannten Preis erzielt wird 
+	 * @return					ErlÃ¶s in Taler, der durch den Verkauf zum genannten Preis erzielt wird 
 	 */
 	public int verkaufen(Warenart warenart, int mengeVerkaufen, int preis) {
 		if(lagerbestand.containsKey(warenart)) {
